@@ -1,5 +1,4 @@
 # ANN
-Trabajo FSI
 # Clasificación de Logos de Comida Rápida
 Este proyecto implementa y compara diferentes arquitecturas de Redes Neuronales Convolucionales (CNN) utilizando **PyTorch** para la clasificación de logotipos de cadenas de comida rápida. El objetivo es analizar cómo afectan los diferentes hhiperparámetros al rendimiento del modelo.
 
@@ -43,4 +42,9 @@ Utilizamos una red neuronal ya entrenada para combinarla con la nuestra y así t
    - **Congelación (Freezing):** Se congelan las capas convolucionales (feature extractors) para no destruir la información preaprendida.
    - **Adaptación:** Se sustituye la última capa lineal (que clasificaba 1000 clases de ImageNet) por una nueva capa adaptada a nuestras **6 clases** de comida rápida.
    - **Entrenamiento:** Se entrena solamente esta última capa.
+ 
+## Conclusiones
+
+ - **Limitación de los datos:** Las redes propias (Fase 1) llegaron a un techo de rendimiento debido al tamaño limitado del dataset. Aumentar la profundidad (Deep CNN) no mejoró sustancialmente los resultados sin más datos.
+ - **Efectividad del Transfer Learning:** El uso de ResNet18 demostró ser la estrategia más eficiente, alcanzando una precisión casi perfecta con muy pocas épocas de entrenamiento. Esto valida que, para problemas con pocos datos, reutilizar redes preentrenadas es superior a diseñar arquitecturas desde cero.
 
