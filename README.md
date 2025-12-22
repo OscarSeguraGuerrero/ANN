@@ -14,22 +14,22 @@ Se han realizado un total de 5 experimentos.
 ### 1. Modelo Base (BaseCNN)
  - **Arquitectura:** 3 bloques convolucionales (Conv2d + ReLU + MaxPool) seguidos de 2 capas lineales.
  - **Hiperparámetros:** Optimizador `Adam` (lr=0.001), 15 épocas.
- - **Resultados:**
+ - **Resultados:** Rápida convergencia pero posible Overfitting.
 ### 2. Cambio de Optimizador (SGD)
  - **Arquitectura:** Misma arquitectura `BaseCNN`.
  - **Hiperparámetros:** Optimizador `SGD` (lr=0.01, momentum=0.9).
- - **Resultados:**
+ - **Resultados:** Fue más lento y no arregló el problema del posilble overfitting.
 ### 3. Regularización (DropoutCNN)
  - **Arquitectura:** Arquitectura Base
  - **Hiperparámetros:** Capa de `Dropout (0.5)` antes de la clasificación final.
- - **Resultados:**
+ - **Resultados:** Mejoró un poco la generalización.
 ### 4. Red Profunda (DeepCNN)
  - **Arquitectura:** Se aumentó la profundidad a **4 capas convolucionales**, duplicando filtros progresivamente (32 -> 64 -> 128 -> 256).
  - **Hiperparámetros:** Mismos hiperparámetros que en `BaseCNN`.
- - **Resultados:**
+ - **Resultados:** Resultados muy parecidos al resto de experimentos. 
 ### 5. Data Augmentation
  - **Técnica:** Se aplicaron transformaciones aleatorias al set de entrenamiento en tiempo real:
    - `RandomHorizontalFlip`: Volteo horizontal.
    - `RandomRotation(15)`: Rotación de ±15 grados.
    - `ColorJitter`: Variación de brillo y contraste (0.2).
- - **Resultados:**
+ - **Resultados:** Redujo mucho el overfitting, experimento con mejores resultados de estos 5.
