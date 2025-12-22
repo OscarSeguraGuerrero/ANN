@@ -12,22 +12,24 @@ Se ha utilizado el conjunto de datos de Kaggle: `logos-bk-kfc-mcdonald-starbucks
 ## Metodología y Experimentos
 Se han realizado un total de 5 experimentos.
 ### 1. Modelo Base (BaseCNN)
- - **Arquitectura:** 
- - **Hiperparámetros:**
+ - **Arquitectura:** 3 bloques convolucionales (Conv2d + ReLU + MaxPool) seguidos de 2 capas lineales.
+ - **Hiperparámetros:** Optimizador `Adam` (lr=0.001), 15 épocas.
  - **Resultados:**
 ### 2. Cambio de Optimizador (SGD)
- - **Arquitectura:** 
- - **Hiperparámetros:**
+ - **Arquitectura:** Misma arquitectura `BaseCNN`.
+ - **Hiperparámetros:** Optimizador `SGD` (lr=0.01, momentum=0.9).
  - **Resultados:**
 ### 3. Regularización (DropoutCNN)
- - **Arquitectura:** 
- - **Hiperparámetros:**
+ - **Arquitectura:** Arquitectura Base
+ - **Hiperparámetros:** Capa de `Dropout (0.5)` antes de la clasificación final.
  - **Resultados:**
 ### 4. Red Profunda (DeepCNN)
- - **Arquitectura:** 
- - **Hiperparámetros:**
+ - **Arquitectura:** Se aumentó la profundidad a **4 capas convolucionales**, duplicando filtros progresivamente (32 -> 64 -> 128 -> 256).
+ - **Hiperparámetros:** Mismos hiperparámetros que en `BaseCNN`.
  - **Resultados:**
 ### 5. Data Augmentation
- - **Arquitectura:** 
- - **Hiperparámetros:**
+ - **Técnica:** Se aplicaron transformaciones aleatorias al set de entrenamiento en tiempo real:
+   - `RandomHorizontalFlip`: Volteo horizontal.
+   - `RandomRotation(15)`: Rotación de ±15 grados.
+   - `ColorJitter`: Variación de brillo y contraste (0.2).
  - **Resultados:**
