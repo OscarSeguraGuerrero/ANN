@@ -39,8 +39,8 @@ Utilizamos una red neuronal ya entrenada para combinarla con la nuestra y así t
  - **Modelo:** Se utilizó una red **ResNet18** preentrenada con el dataset **ImageNet** (1.2 millones de imágenes).
  - **Resultado:** Rendimiento superior y convergencia inmediata.
  - **¿Por qué funciona mejor?** En lugar de aprender a "ver" desde cero (bordes, texturas, formas), utilizamos una red que ya sabe reconocer características visuales complejas. El proceso:
-  - **Carga de Pesos:** Se importa el modelo con los pesos aprendidos en ImageNet.
-  - **Congelación (Freezing):** Se congelan las capas convolucionales (feature extractors) para no destruir la información preaprendida.
-  - **Adaptación:** Se sustituye la última capa lineal (que clasificaba 1000 clases de ImageNet) por una nueva capa adaptada a nuestras **6 clases** de comida rápida.
-  - **Entrenamiento:** Se entrena solamente esta última capa.
+   - **Carga de Pesos:** Se importa el modelo con los pesos aprendidos en ImageNet.
+   - **Congelación (Freezing):** Se congelan las capas convolucionales (feature extractors) para no destruir la información preaprendida.
+   - **Adaptación:** Se sustituye la última capa lineal (que clasificaba 1000 clases de ImageNet) por una nueva capa adaptada a nuestras **6 clases** de comida rápida.
+   - **Entrenamiento:** Se entrena solamente esta última capa.
 
