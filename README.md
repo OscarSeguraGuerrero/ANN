@@ -25,13 +25,13 @@ Se han realizado un total de 5 experimentos.
 ### 4. Red Profunda (DeepCNN)
  - **Arquitectura:** Se aumentó la profundidad a **4 capas convolucionales**, duplicando filtros progresivamente (32 -> 64 -> 128 -> 256).
  - **Hiperparámetros:** Mismos hiperparámetros que en `BaseCNN`.
- - **Resultados:** Resultados muy parecidos al resto de experimentos. 
+ - **Resultados:** Se aprecia una mejora en los resultados y una mayor estabilidad en los resultados. 
 ### 5. Data Augmentation
  - **Técnica:** Se aplicaron transformaciones aleatorias al set de entrenamiento en tiempo real:
    - `RandomHorizontalFlip`: Volteo horizontal.
    - `RandomRotation(15)`: Rotación de ±15 grados.
    - `ColorJitter`: Variación de brillo y contraste (0.2).
- - **Resultados:** Redujo mucho el overfitting, experimento con mejores resultados de estos 5.
+ - **Resultados:** Redujo mucho el overfitting, experimento con mejores resultados de estos 5 junto a la red profunda.
 
 ## Transfer Learning
 Utilizamos una red neuronal ya entrenada para combinarla con la nuestra y así tratar de obtener mejores resultados.
@@ -45,6 +45,6 @@ Utilizamos una red neuronal ya entrenada para combinarla con la nuestra y así t
  
 ## Conclusiones
 
- - **Limitación de los datos:** Las redes propias (Fase 1) llegaron a un techo de rendimiento debido al tamaño limitado del dataset. Aumentar la profundidad (Deep CNN) no mejoró sustancialmente los resultados sin más datos.
+ - **Limitación de los datos:** Las redes propias (Fase 1) llegaron a un techo de rendimiento debido al tamaño limitado del dataset.
  - **Efectividad del Transfer Learning:** El uso de ResNet18 demostró ser la estrategia más eficiente, alcanzando una precisión casi perfecta con muy pocas épocas de entrenamiento. Esto valida que, para problemas con pocos datos, reutilizar redes preentrenadas es superior a diseñar arquitecturas desde cero.
 
