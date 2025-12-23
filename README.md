@@ -21,7 +21,7 @@ Se han realizado un total de 5 experimentos.
 ### 3. Regularización (DropoutCNN)
  - **Arquitectura:** Arquitectura Base
  - **Hiperparámetros:** Capa de `Dropout (0.5)` antes de la clasificación final.
- - **Resultados:** Mejoró un poco la generalización.
+ - **Resultados:** Mejoró un poco la generalización respecto a la arquitectura base.
 ### 4. Red Profunda (DeepCNN)
  - **Arquitectura:** Se aumentó la profundidad a **4 capas convolucionales**, duplicando filtros progresivamente (32 -> 64 -> 128 -> 256).
  - **Hiperparámetros:** Mismos hiperparámetros que en `BaseCNN`.
