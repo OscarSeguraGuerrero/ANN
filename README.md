@@ -17,7 +17,7 @@ Se han realizado un total de 5 experimentos.
 ### 2. Cambio de Optimizador (SGD)
  - **Arquitectura:** Misma arquitectura `BaseCNN`.
  - **Hiperparámetros:** Optimizador `SGD` (lr=0.01, momentum=0.9).
- - **Resultados:** Fue más lento y no arregló el problema del posilble overfitting.
+ - **Resultados:** Fue más lento pero arregló el problema del posilble overfitting.
 ### 3. Regularización (DropoutCNN)
  - **Arquitectura:** Arquitectura Base
  - **Hiperparámetros:** Capa de `Dropout (0.5)` antes de la clasificación final.
